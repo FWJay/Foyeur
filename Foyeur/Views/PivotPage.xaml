@@ -1,0 +1,41 @@
+<Page
+    x:Class="Foyeur.Views.PivotPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding PivotViewModel, Source={StaticResource Locator}}"
+    xmlns:model="using:Foyeur.Models"
+    xmlns:views="using:Foyeur.Views"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot x:Uid="PivotPage">
+            <PivotItem x:Uid="PivotItem_Main">
+                <Frame>
+                    <views:MainPage/>
+                </Frame>
+            </PivotItem>
+            <PivotItem x:Uid="PivotItem_CardsDetail">
+                <Frame>
+                    <views:CardsDetailPage/>
+                </Frame>
+            </PivotItem>
+            <PivotItem x:Uid="PivotItem_Locations">
+                <Frame>
+                    <views:LocationsPage/>
+                </Frame>
+            </PivotItem>
+            <PivotItem x:Uid="PivotItem_Trailers">
+                <Frame>
+                    <views:TrailersPage/>
+                </Frame>
+            </PivotItem>
+            <PivotItem x:Uid="PivotItem_Settings">
+                <Frame>
+                    <views:SettingsPage/>
+                </Frame>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
